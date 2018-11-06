@@ -3,12 +3,23 @@
 .group-button {
   display: table;
   width: 100%;
+  margin: 10px 0px;
+}
+.group-button.inline {
+  display: flex;
+  flex-direction: row;
+}
+.group-button.right {
+  justify-content: flex-end;
+}
+.group-button.center {
+  justify-content: center;
 }
 .button {
   min-width: 60px;
   min-height: 25px;
   padding: 10px 10px;
-  margin: 10px 5px;
+  margin: 1px 5px;
   border: 1px solid #ccc;
   background: #f7f7f7;
   color: #666;

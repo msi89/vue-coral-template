@@ -9,28 +9,61 @@
                     <!-- DROPDOWN  -->
                     <div>
                         <h2>Dropdown Button</h2>
-                        <div class="dropdown">
-                            <button id="down" class="button btn-primary-light dropdown-button">show</button>
-                            <div class="dropdown-menu" data-visible="hide">
-                                <div class="arrow-up"></div>
+                        <div class="dropdown is-active">
+                            <div class="dropdown-trigger">
+                                <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
+                                    <span>Dropdown button</span>
+                                    <span class="icon is-small">
+                                        <i class="fas fa-angle-down" aria-hidden="true"></i>
+                                    </span>
+                                </button>
+                            </div>
+                            <div class="dropdown-menu" id="dropdown-menu" role="menu">
                                 <div class="dropdown-content">
-                                    <a href="#">Home</a>
-                                    <a href="#">About</a>
-                                    <a href="#">Service</a>
-                                    <a href="#">Contact</a>
+                                    <a href="#" class="dropdown-item">
+                                        Dropdown item
+                                    </a>
+                                    <a class="dropdown-item">
+                                        Other dropdown item
+                                    </a>
+                                    <a href="#" class="dropdown-item is-active">
+                                        Active dropdown item
+                                    </a>
+                                    <a href="#" class="dropdown-item">
+                                        Other dropdown item
+                                    </a>
+                                    <hr class="dropdown-divider">
+                                    <a href="#" class="dropdown-item">
+                                        With a divider
+                                    </a>
                                 </div>
                             </div>
                         </div>
 
+
                         <div class="dropdown">
-                            <button id="down" class="button btn-primary dropdown-button">show</button>
-                            <div class="dropdown-menu" data-visible="hide">
-                                <div class="arrow-up"></div>
+                            <div class="dropdown-trigger">
+                                <button class="button" aria-haspopup="true" aria-controls="dropdown-menu2">
+                                    <span>Content</span>
+                                    <span class="icon is-small">
+                                        <i class="fas fa-angle-down" aria-hidden="true"></i>
+                                    </span>
+                                </button>
+                            </div>
+                            <div class="dropdown-menu" id="dropdown-menu2" role="menu">
                                 <div class="dropdown-content">
-                                    <a href="#">Home</a>
-                                    <a href="#">About</a>
-                                    <a href="#">Service</a>
-                                    <a href="#">Contact</a>
+                                    <div class="dropdown-item">
+                                        <p>You can insert <strong>any type of content</strong> within the dropdown
+                                            menu.</p>
+                                    </div>
+                                    <hr class="dropdown-divider">
+                                    <div class="dropdown-item">
+                                        <p>You simply need to use a <code>&lt;div&gt;</code> instead.</p>
+                                    </div>
+                                    <hr class="dropdown-divider">
+                                    <a href="#" class="dropdown-item">
+                                        This is a link
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -106,7 +139,13 @@
                             <div class="input-tag-content"></div>
                             <input type="text" id="tag_input" class="tag_input" value="" />
                         </div>
-
+                        <div class="col-sm-12">
+                            <div class="group-button inline right">
+                                  <button class="button" id="btn_get_tags">get tags</button>
+                            </div>
+                            <h5>List tags</h5>
+                              <ul class="col-sm-12" id="list_tag"></ul>
+                        </div>
                     </section>
                 </section>
 
@@ -202,7 +241,7 @@
                     <h2>Tabs</h2>
                     <div class="tabs">
                         <input type="radio" name="tabs" id="tabone" checked="checked">
-                        <label for="tabone">Tab One</label>
+                        <label for="tabone">General</label>
                         <div class="tab">
                             <h1>Tab One Content</h1>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
@@ -226,7 +265,7 @@
                         </div>
 
                         <input type="radio" name="tabs" id="tabtwo">
-                        <label for="tabtwo">Tab Two</label>
+                        <label for="tabtwo">Editor</label>
                         <div class="tab">
                             <h1>Tab Two Content</h1>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
@@ -241,7 +280,7 @@
                         </div>
 
                         <input type="radio" name="tabs" id="tabthree">
-                        <label for="tabthree">Tab Three</label>
+                        <label for="tabthree">Settings</label>
                         <div class="tab">
                             <h1>Tab Three Content</h1>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>

@@ -4,6 +4,9 @@
          <div class="sidebar" id="sidebar">
             <div>
                <aside class="menu">
+                   <div class="menu-header bgk-primary" >
+                       <div class="menu-header-title">Coral</div>
+                   </div>
                         <p class="menu-label">
                             General
                         </p>
@@ -15,18 +18,18 @@
                             Administration
                         </p>
                         <div class="menu-list">
-                            <li><router-link to="#">Team Settings</router-link></li>
+                            <li><router-link to="#"><i class="material-icons">settings</i>Team Settings</router-link></li>
                             <li>
-                                <router-link to="#">Manage Your Team</router-link>
-                                <ul>
+                                <router-link to="#" class="accordion"><i class="material-icons">settings_input_composite</i>Manage Your Team</router-link>
+                                <ul class="accordion-content">
                                     <li><router-link to="#">Members</router-link></li>
                                     <li><router-link to="#">Plugins</router-link></li>
                                     <li><router-link to="#">Add a member</router-link></li>
                                 </ul>
                             </li>
-                            <li><router-link to="#">Invitations</router-link></li>
-                            <li><router-link to="#">Cloud Storage Environment Settings</router-link></li>
-                            <li><router-link to="#">Authentication</router-link></li>
+                            <li><router-link to="#"><i class="material-icons">folder</i>Invitations</router-link></li>
+                            <li><router-link to="#"><i class="material-icons">cloud</i>Cloud Storage Environment Settings</router-link></li>
+                            <li><router-link to="#"><i class="material-icons">folder</i>Authentication</router-link></li>
                         </div>
                         <p class="menu-label">
                             Transactions

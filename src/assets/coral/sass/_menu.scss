@@ -1,6 +1,7 @@
 .menu {
   font-size: 1rem;
 }
+
 .menu.is-small {
   font-size: 0.75rem;
 }
@@ -27,6 +28,11 @@
 .menu-list a.is-active {
   background-color: $color-primary;
   color: #fff;
+  opacity: 0.6;
+}
+.menu-list a.selected {
+  background-color: $color-selected-bg;
+  color: $color-selected;
 }
 .menu-list li ul {
   border-left: 1px solid #dbdbdb;
@@ -46,6 +52,7 @@
   color: #7a7a7a;
   font-size: 0.75em;
   letter-spacing: 0.1em;
+  margin-left: 5px;
   text-transform: uppercase;
 }
 .menu-label:not(:first-child) {

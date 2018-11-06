@@ -122,3 +122,14 @@ table {
   display: block;
   opacity: 1;
 }
+.menu .menu-header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  height: 58px;
+}
+.menu .menu-header-title {
+  font-size: 25px;
+  color: #fff;
+  margin: 0 10px;
+}

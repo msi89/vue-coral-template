@@ -1,12 +1,30 @@
 import $ from "jquery";
+import { tag } from "postcss-selector-parser";
 
 $(document).ready(function() {
-  alert("hello");
-
   getDatas();
   $("#myDatatable").DataTable();
+
+  //input tag value
+  $("#btn_get_tags").click(() => {
+    var tts = getTages();
+    for (var item in tts) {
+      window.console.log(tts[item]);
+      $("#list_tag").append("<li>" + tts[item] + "</li>");
+    }
+  });
 });
 
+//get tags input
+function getTages() {
+  var tags = [];
+  document.querySelectorAll(".input-tag-item").forEach(itag => {
+    tags.push(itag.getAttribute("data-value"));
+  });
+  return tags;
+}
+
+// load tables datas dynamically
 function getDatas() {
   var dt =
     "<tr><td>Assie marc</td><td>Abidjan</td> <td>58min 40s</td> <td>1h23 58min 40s</td> <td>2eme</td></tr>";
