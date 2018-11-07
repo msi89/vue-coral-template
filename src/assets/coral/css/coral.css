@@ -2729,6 +2729,22 @@ table {
   cursor: pointer;
 }
 
+.btn_icon {
+  margin: 0px 5px;
+  background: transparent;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s;
+}
+
+.btn_icon:active {
+  background: rgba(255, 225, 255, 0.1);
+}
+
 /* FIELD INPUT */
 .field__input {
   background-color: transparent;
@@ -3356,23 +3372,6 @@ table {
   color: #363636;
 }
 
-.menu-list a.is-active {
-  background-color: #2ec866;
-  color: #fff;
-  opacity: 0.6;
-}
-
-.menu-list a.selected {
-  background-color: #f6f6f6;
-  color: #363636;
-}
-
-.menu-list li ul {
-  border-left: 1px solid #dbdbdb;
-  margin: 0.75em;
-  padding-left: 0.75em;
-}
-
 .menu-list li a {
   display: flex;
   align-items: center;
@@ -3396,6 +3395,36 @@ table {
 
 .menu-label:not(:last-child) {
   margin-bottom: 1em;
+}
+
+/* arrow  up:02EF, down: 02F0, left:02F1 , right: 02F2` */
+/* angle  up:2038, down:02EC , left:2039 , right:203A ` */
+.menu-list a.expandible::after {
+  content: "›";
+  float: right;
+  position: absolute;
+  right: 0;
+  margin-right: 10px;
+}
+
+.menu-list a.collapsed::after {
+  content: "ˬ";
+  justify-content: flex-end;
+}
+
+.menu-list a.switched {
+  background: #f4f4f4;
+  color: #363636;
+}
+
+.menu-list-collapse {
+  display: none;
+  border-left: 1px solid #dbdbdb;
+  margin: 0.75em;
+  padding-left: 0.75em;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
 }
 
 /* */
@@ -3562,35 +3591,6 @@ button.dropdown-item.is-active {
   margin: 0.5rem 0;
 }
 
-.accordion {
-  transition: 0.4s;
-}
-
-.accordion.active,
-.accordion:hover {
-  background-color: #ccc;
-}
-
-.accordion:after {
-  content: "▼";
-  color: #777;
-  font-weight: bold;
-  float: right;
-  margin-left: 5px;
-}
-
-.accordion.active:after {
-  content: "▲";
-}
-
-.accordion-content {
-  padding: 0 18px;
-  background-color: white;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.2s ease-out;
-}
-
 /* last import */
 .rounded {
   border-radius: 10em;
@@ -3610,6 +3610,29 @@ button.dropdown-item.is-active {
 
 .isCenter {
   text-align: center;
+}
+
+.bulle {
+  position: fixed;
+  border-radius: 25%;
+  padding: 2px;
+  font-size: 11px;
+  color: #fff;
+  margin-left: 14px;
+  margin-top: -10px;
+}
+
+.count {
+  border-radius: 50%;
+  color: #fff;
+  font-size: 10px;
+  height: 15px;
+  width: 15px;
+  line-height: 15px;
+  text-align: center;
+  position: absolute;
+  margin-left: 10px;
+  margin-top: -10px;
 }
 
 ul,

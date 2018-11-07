@@ -49,19 +49,38 @@ a:visited {
 .main .active {
   width: 100%;
 }
-.navbar {
+.header {
   position: fixed;
-  height: 40px;
+  height: 55px;
   width: 100%;
+  background: #fff;
   display: flex;
   flex-direction: row;
-  background: #fff;
+}
+.header .brand {
+  width: calc(100vw - 130px);
+  height: 55px;
+  position: fixed;
+  display: flex;
+  align-items: center;
+}
+.header .navbar {
+  padding: 6px 0px;
+  width: 130px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+}
+.header .navbar .material-icons {
+  font-size: 16px;
 }
 .content {
   padding: 0px;
-  margin-top: 40px;
+  margin-top: 55px;
   width: calc(100% - 0px);
-  height: calc(100% - 40px);
+  height: calc(100% - 55px);
   background: bgk-primary;
   overflow: auto;
 }
@@ -132,4 +151,6 @@ table {
   font-size: 25px;
   color: #fff;
   margin: 0 10px;
+  display: flex;
+  align-items: center;
 }

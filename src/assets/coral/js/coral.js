@@ -145,14 +145,14 @@ document.addEventListener("DOMContentLoaded", function() {
       }
     });
     // menu item selected
-    document.querySelectorAll(".menu-list li a").forEach(function(az) {
-      // az.classList.remove("is-active");
-      if (az.contains(e.target)) {
-        az.classList.add("is-active");
-      } else {
-        az.classList.remove("is-active");
-      }
-    });
+    // document.querySelectorAll(".menu-list li a").forEach(function(az) {
+    //   // az.classList.remove("is-active");
+    //   if (az.contains(e.target)) {
+    //     az.classList.add("is-active");
+    //   } else {
+    //     az.classList.remove("is-active");
+    //   }
+    // });
 
     //input tag
     document.addEventListener("keyup", function(e) {
@@ -182,20 +182,24 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     //accordion
-    var acc = document.getElementsByClassName("accordion");
-    var i;
-
-    for (i = 0; i < acc.length; i++) {
-      acc[i].addEventListener("click", function() {
-        this.classList.toggle("active");
-        var panel = this.nextElementSibling;
-        if (panel.style.maxHeight) {
-          panel.style.maxHeight = null;
-        } else {
-          panel.style.maxHeight = panel.scrollHeight + "px";
+    document.querySelectorAll(".menu-list li a").forEach(atg => {
+      if (atg.contains(e.target)) {
+        atg.classList.add("switched");
+        if (atg.getAttribute("data-expand") == "true") {
+          atg.classList.toggle("collapsed");
+          var panel = atg.nextElementSibling;
+          if (panel.style.maxHeight) {
+            panel.style.display = "none";
+            panel.style.maxHeight = null;
+          } else {
+            panel.style.display = "block";
+            panel.style.maxHeight = panel.scrollHeight + "px";
+          }
         }
-      });
-    }
+      } else {
+        atg.classList.remove("switched");
+      }
+    });
 
     //others
   });
